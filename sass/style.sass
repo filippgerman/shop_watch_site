@@ -1,0 +1,303 @@
+//==========Import normalize==========
+@import "./normalize/normalize.css"
+
+//========== Fonts ==========
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=Playfair+Display:wght@400;700&display=swap')
+
+@font-face 
+  font-family: 'Post No Bills Jaffna'
+  src: url('./fonts/PostNoBillsJaffna-Bold.eot')
+  src: local('☺'), url('./fonts/PostNoBillsJaffna-Bold.woff') format('woff'), url('./fonts/PostNoBillsJaffna-Bold.ttf') format('truetype'), url('./fonts/PostNoBillsJaffna-Bold.svg') format('svg')
+  font-weight: 700
+  font-style: normal
+          
+//==========Color Bg==========
+$bg-dark: #000000
+$bg-grey: #0F0F0F
+$bg-brown: #191B1C
+$focus-color: #1F1F1F
+
+//========== Color ==========
+$grey: #969696
+$white: #FFFFFF
+$lt-grey: #D0D0D0
+
+//========== Sizes =========
+$screen-sm: 567px
+$screen-md: 768px
+$screen-lg: 992px
+$screen-xl: 1200px
+
+$screen-sm-max: 767px
+$screen-md-max: 991px
+$screen-lg-max: 1199px
+
+//========== Mixins =========
+=Jaffna($font-size, $line-height)
+  font-family: Post No Bills Jaffna
+  font-style: normal
+  font-weight: bold
+  font-size: $font-size
+  line-height: $line-height
+  color: $white
+
+=Sans($font-size, $line-height, $color)
+  font-family: PT Sans
+  font-style: normal
+  font-weight: normal
+  font-size: $font-size
+  line-height: $line-height
+  text-transform: uppercase
+  color: $color
+
+=Playfair($font-size, $line-height, $color)
+  font-family: Playfair Display
+  font-style: normal
+  font-weight: bold
+  font-size: $font-size
+  line-height: $line-height
+  text-align: center
+  color: $color
+
+=Centering()
+  display: flex 
+  justify-content: space-between
+  align-items: center
+
+
+//========== Container ==========
+.container
+  max-width: 1180px 
+  margin: 0 auto
+
+  @media screen and (max-width: $screen-sm)
+    padding: 0px 0px  
+
+
+  @media screen and (min-width: $screen-sm)
+    padding: 0px 10px
+
+//========== Header ==========
+.header
+  background: $bg-dark
+
+.header_content
+  +Centering()
+  height: 44px
+
+.header__text
+  font-family: PT Sans
+  font-style: normal
+  font-weight: normal
+  font-size: 12px
+  line-height: 16px
+  color: $grey
+  text-decoration: none
+
+.icon
+  fill: $grey
+  
+
+//===== Header-address =====
+.address
+  +Centering()
+
+.address-info
+  display: flex
+  
+  &__item
+    padding: 0px 8px 0px 0px
+    + .address-info__item
+      padding: 0px 8px
+      border-left: 1px solid $grey
+
+.icon-phone
+    width: 14px
+    height: 14px
+    margin-right: 16px
+
+//===== Header-links =====
+.header__links
+  display: flex
+
+.icon-log-in
+  width: 14px
+  height: 14px
+
+.header__authorization
+  margin-left: 12px
+  &:hover
+    color: $white
+
+//========== Main ==========
+  
+//========== top-board ==========
+.top-board
+  height: 80px
+  background: $bg-grey
+
+.top-board__content
+  +Centering()
+
+.name-company
+  +Jaffna(36px, 54px)
+
+//===== menu  =====
+.menu
+  display: flex
+
+//===== nav  =====
+.nav
+  +Centering()
+
+.nav__menu
+  display: flex
+
+.nav__item
+  display: flex
+  width: 136px
+  height: 80px
+  text-align: center
+  align-items: center
+  justify-content: center
+  &:hover
+    background: $focus-color
+
+.nav__link
+  +Sans(14px, 18px, $grey)
+  text-decoration: none
+
+//===== icon-bar  =====
+.icon-bar
+  padding-left: 40px
+
+.icon-bar__menu
+  +Centering()
+  height: 100%
+
+.icon-bar__item
+  + .icon-bar__item
+    margin-left: 40px
+
+.icon-bar__search, .icon-bar__basket
+  width: 22px
+  height: 22px
+  fill: $white
+
+//========== introductory-page ==========
+.introductory-page
+  max-height: 810px
+  height: 100vh
+  max-width: 1920px
+
+  background-image: url('../images/main/introductory_page/bg.svg')
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
+  background-color: $bg-grey
+
+.introductory-page__content
+  display: flex
+  align-items: center
+  flex-direction: column
+  justify-content: space-around
+  height: 810px
+
+//===== logo  =====
+.logo
+  height: 320px
+  width: 320px
+  border: 4px solid $white
+  display: flex
+  align-items: center
+  flex-direction: column
+  justify-content: center
+
+.logo__name-company
+  +Jaffna(64px, 94px)
+  border-bottom: 2px solid $white
+
+.logo__name-city
+  +Sans(21px, 28px, $white)
+  padding-top: 7px
+
+//===== info  =====
+.info
+  width: 730px
+  +Sans(16px, 150%, $white)
+  text-align: center
+
+//===== articles  =====
+
+.new-collection
+  display: flex
+
+.season-products
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+  background: $bg-dark
+  height: 730px
+  width: 100%
+  max-width: 1040px
+
+.season-products__date
+  +Playfair(36px, 48px, $white)
+  margin-bottom: 50px
+
+.season-products__line
+  width: 120px
+  border: 1px solid $white
+  margin-bottom: 50px
+
+.season-products__collection
+  display: flex
+
+.season-products__item
+  + .season-products__item
+    margin-left: 50px
+
+.season-products__cart 
+  width: 260px
+  height: 325px
+  background: $bg-brown
+  display: flex
+  justify-content: center
+  align-items: center
+
+.saeson-products__photo 
+  width: 215px
+  height: 214px
+
+.product-name
+  +Playfair(18px, 24px, $white)
+  text-align: left
+  padding-top: 25px
+
+.product-price
+  +Playfair(16px, 21px, $lt-grey)
+  text-align: left
+  padding-top: 10px
+
+
+//===== promo  =====
+.promo
+  background-image: url('../images/main/promo/man.svg')
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
+  background-color: $bg-dark
+
+  width: 100%
+  max-width: 880px
+  height: 730px
+
+.promo__text
+  +Playfair(36px, 48px, $white)
+
+.promo__line
+  width: 120px
+  color: $white
+

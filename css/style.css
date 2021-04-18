@@ -1,0 +1,282 @@
+@charset "UTF-8";
+@import url(./normalize/normalize.css);
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&family=Playfair+Display:wght@400;700&display=swap");
+@font-face {
+  font-family: 'Post No Bills Jaffna';
+  src: url("./fonts/PostNoBillsJaffna-Bold.eot");
+  src: local("☺"), url("./fonts/PostNoBillsJaffna-Bold.woff") format("woff"), url("./fonts/PostNoBillsJaffna-Bold.ttf") format("truetype"), url("./fonts/PostNoBillsJaffna-Bold.svg") format("svg");
+  font-weight: 700;
+  font-style: normal; }
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto; }
+  @media screen and (max-width: 567px) {
+    .container {
+      padding: 0px 0px; } }
+  @media screen and (min-width: 567px) {
+    .container {
+      padding: 0px 10px; } }
+
+.header {
+  background: #000000; }
+
+.header_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 44px; }
+
+.header__text {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  color: #969696;
+  text-decoration: none; }
+
+.icon {
+  fill: #969696; }
+
+.address {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.address-info {
+  display: flex; }
+  .address-info__item {
+    padding: 0px 8px 0px 0px; }
+    .address-info__item + .address-info__item {
+      padding: 0px 8px;
+      border-left: 1px solid #969696; }
+
+.icon-phone {
+  width: 14px;
+  height: 14px;
+  margin-right: 16px; }
+
+.header__links {
+  display: flex; }
+
+.icon-log-in {
+  width: 14px;
+  height: 14px; }
+
+.header__authorization {
+  margin-left: 12px; }
+  .header__authorization:hover {
+    color: #FFFFFF; }
+
+.top-board {
+  height: 80px;
+  background: #0F0F0F; }
+
+.top-board__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.name-company {
+  font-family: Post No Bills Jaffna;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 54px;
+  color: #FFFFFF; }
+
+.menu {
+  display: flex; }
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.nav__menu {
+  display: flex; }
+
+.nav__item {
+  display: flex;
+  width: 136px;
+  height: 80px;
+  text-align: center;
+  align-items: center;
+  justify-content: center; }
+  .nav__item:hover {
+    background: #1F1F1F; }
+
+.nav__link {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #969696;
+  text-decoration: none; }
+
+.icon-bar {
+  padding-left: 40px; }
+
+.icon-bar__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%; }
+
+.icon-bar__item + .icon-bar__item {
+  margin-left: 40px; }
+
+.icon-bar__search, .icon-bar__basket {
+  width: 22px;
+  height: 22px;
+  fill: #FFFFFF; }
+
+.introductory-page {
+  max-height: 810px;
+  height: 100vh;
+  max-width: 1920px;
+  background-image: url("../images/main/introductory_page/bg.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #0F0F0F; }
+
+.introductory-page__content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 810px; }
+
+.logo {
+  height: 320px;
+  width: 320px;
+  border: 4px solid #FFFFFF;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center; }
+
+.logo__name-company {
+  font-family: Post No Bills Jaffna;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 94px;
+  color: #FFFFFF;
+  border-bottom: 2px solid #FFFFFF; }
+
+.logo__name-city {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding-top: 7px; }
+
+.info {
+  width: 730px;
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-align: center; }
+
+.new-collection {
+  display: flex; }
+
+.season-products {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #000000;
+  height: 730px;
+  width: 100%;
+  max-width: 1040px; }
+
+.season-products__date {
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 48px;
+  text-align: center;
+  color: #FFFFFF;
+  margin-bottom: 50px; }
+
+.season-products__line {
+  width: 120px;
+  border: 1px solid #FFFFFF;
+  margin-bottom: 50px; }
+
+.season-products__collection {
+  display: flex; }
+
+.season-products__item + .season-products__item {
+  margin-left: 50px; }
+
+.season-products__cart {
+  width: 260px;
+  height: 325px;
+  background: #191B1C;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.saeson-products__photo {
+  width: 215px;
+  height: 214px; }
+
+.product-name {
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: #FFFFFF;
+  text-align: left;
+  padding-top: 25px; }
+
+.product-price {
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  color: #D0D0D0;
+  text-align: left;
+  padding-top: 10px; }
+
+.promo {
+  background-image: url("../images/main/promo/man.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #000000;
+  width: 100%;
+  max-width: 880px;
+  height: 730px; }
+
+.promo__text {
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 48px;
+  text-align: center;
+  color: #FFFFFF; }
+
+.promo__line {
+  width: 120px;
+  color: #FFFFFF; }
