@@ -23,7 +23,6 @@ $white: #FFFFFF
 $lt-grey: #D0D0D0
 
 //========== Sizes =========
-$screen-sm: 567px
 $screen-md: 768px
 $screen-lg: 992px
 $screen-xl: 1200px
@@ -69,13 +68,6 @@ $screen-lg-max: 1199px
 .container
   max-width: 1180px 
   margin: 0 auto
-
-  @media screen and (max-width: $screen-sm)
-    padding: 0px 0px  
-
-
-  @media screen and (min-width: $screen-sm)
-    padding: 0px 10px
 
 //========== Header ==========
 .header
@@ -190,7 +182,7 @@ $screen-lg-max: 1199px
   height: 100vh
   max-width: 1920px
 
-  background-image: url('../images/main/introductory_page/bg.svg')
+  background-image: url('../images/main/introductory_page/bg.png')
   background-position: center center
   background-repeat: no-repeat
   background-size: cover
@@ -227,10 +219,22 @@ $screen-lg-max: 1199px
   +Sans(16px, 150%, $white)
   text-align: center
 
-//===== articles  =====
+//========== articles ==========
+.new-collection
+  max-height: 730px
+  max-width: 1900px
+  display: flex
 
+
+//===== new-collection  =====
 .new-collection
   display: flex
+  flex-direction: column
+
+.new-collection__up-content
+  display: flex
+  @media screen and (min-width: $screen-md) and (max-width: $screen-lg-max)
+    display: block
 
 .season-products
   display: flex
@@ -239,9 +243,13 @@ $screen-lg-max: 1199px
   align-items: center
 
   background: $bg-dark
+  width: 55%
   height: 730px
-  width: 100%
-  max-width: 1040px
+
+  @media screen and (min-width: $screen-md) and (max-width: $screen-lg-max)
+    width: 100%
+  @media screen and (min-width: $screen-xl)
+    max-width: 1040px
 
 .season-products__date
   +Playfair(36px, 48px, $white)
@@ -254,13 +262,18 @@ $screen-lg-max: 1199px
 
 .season-products__collection
   display: flex
+  justify-content: space-evenly
 
+  @media screen and (min-width: $screen-md) and (max-width: $screen-lg-max)
+    width: 100%
+    
 .season-products__item
   + .season-products__item
     margin-left: 50px
 
 .season-products__cart 
-  width: 260px
+  width: 100%
+  max-width: 170px
   height: 325px
   background: $bg-brown
   display: flex
@@ -268,8 +281,10 @@ $screen-lg-max: 1199px
   align-items: center
 
 .saeson-products__photo 
-  width: 215px
-  height: 214px
+  max-width: 215px
+  max-height: 214px
+  height: 100%
+  width: 100%
 
 .product-name
   +Playfair(18px, 24px, $white)
@@ -284,20 +299,103 @@ $screen-lg-max: 1199px
 
 //===== promo  =====
 .promo
-  background-image: url('../images/main/promo/man.svg')
-  background-position: center center
+  background-image: url('../images/main/promo/man.png')
   background-repeat: no-repeat
   background-size: cover
   background-color: $bg-dark
 
-  width: 100%
-  max-width: 880px
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  align-items: center
+  padding-bottom: 100px
+  box-sizing: border-box
+
+  width: 45%
   height: 730px
+
+  @media screen and (min-width: $screen-md) and (max-width: $screen-lg-max)
+    width: 100%
 
 .promo__text
   +Playfair(36px, 48px, $white)
+  margin-bottom: 30px
 
 .promo__line
   width: 120px
   color: $white
+  margin-bottom: 30px
 
+.promo__link
+  +Sans(18px, 23px, $white)
+  width: 150px
+  height: 50px
+  display: flex
+  align-items: center
+  justify-content: center
+  border: 2px solid $white
+  text-decoration: none
+
+//===== picture  =====
+
+.new-collection__down-content
+  display: flex
+  @media screen and (min-width: $screen-md) and (max-width: $screen-lg-max)
+    display: block
+
+.picture
+  width: 45%
+  height: 600px
+
+  background-image: url('../images/main/articles/picture/bg.png')
+  background-repeat: no-repeat
+  background-size: cover
+  background-color: $bg-dark
+  background-position: center center
+
+  @media screen and (min-width: $screen-md) and (max-width: $screen-lg-max)
+    width: 100%
+
+.collection-info
+  display: flex
+  flex-direction: column
+  justify-content: center
+  background-color: $bg-dark
+  width: 55%
+
+  @media screen and (min-width: $screen-md) and (max-width: $screen-lg-max)
+    width: 100%
+
+.collection-info__article
+  font-family: Playfair Display
+  font-style: normal
+  font-weight: normal
+  font-size: 36px
+  line-height: 48px
+  text-align: center
+  color: $white
+  text-transform: uppercase
+
+.collection-info__line
+  width: 120px
+  margin: 40px auto
+
+.collection-info__text
+  +Sans(14px, 150%, $white)
+  text-transform: none
+  width: 471px
+  height: 173px
+  margin: 0px auto
+  text-align: center
+
+.collection-info__button
+  +Sans(18px, 23px, $white)
+  letter-spacing: 0.1em
+  margin: 40px auto 0px
+  padding: 10px 0px
+  width: 310px
+  background: $bg-dark
+  border: 1px solid $white
+
+.collection-info__location
+  +Sans(18px, 23px, $white)

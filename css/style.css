@@ -11,12 +11,6 @@
 .container {
   max-width: 1180px;
   margin: 0 auto; }
-  @media screen and (max-width: 567px) {
-    .container {
-      padding: 0px 0px; } }
-  @media screen and (min-width: 567px) {
-    .container {
-      padding: 0px 10px; } }
 
 .header {
   background: #000000; }
@@ -138,7 +132,7 @@
   max-height: 810px;
   height: 100vh;
   max-width: 1920px;
-  background-image: url("../images/main/introductory_page/bg.svg");
+  background-image: url("../images/main/introductory_page/bg.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -191,7 +185,19 @@
   text-align: center; }
 
 .new-collection {
+  max-height: 730px;
+  max-width: 1900px;
   display: flex; }
+
+.new-collection {
+  display: flex;
+  flex-direction: column; }
+
+.new-collection__up-content {
+  display: flex; }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    .new-collection__up-content {
+      display: block; } }
 
 .season-products {
   display: flex;
@@ -199,9 +205,14 @@
   justify-content: center;
   align-items: center;
   background: #000000;
-  height: 730px;
-  width: 100%;
-  max-width: 1040px; }
+  width: 55%;
+  height: 730px; }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    .season-products {
+      width: 100%; } }
+  @media screen and (min-width: 1200px) {
+    .season-products {
+      max-width: 1040px; } }
 
 .season-products__date {
   font-family: Playfair Display;
@@ -219,13 +230,18 @@
   margin-bottom: 50px; }
 
 .season-products__collection {
-  display: flex; }
+  display: flex;
+  justify-content: space-evenly; }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    .season-products__collection {
+      width: 100%; } }
 
 .season-products__item + .season-products__item {
   margin-left: 50px; }
 
 .season-products__cart {
-  width: 260px;
+  width: 100%;
+  max-width: 170px;
   height: 325px;
   background: #191B1C;
   display: flex;
@@ -233,8 +249,10 @@
   align-items: center; }
 
 .saeson-products__photo {
-  width: 215px;
-  height: 214px; }
+  max-width: 215px;
+  max-height: 214px;
+  height: 100%;
+  width: 100%; }
 
 .product-name {
   font-family: Playfair Display;
@@ -259,14 +277,21 @@
   padding-top: 10px; }
 
 .promo {
-  background-image: url("../images/main/promo/man.svg");
-  background-position: center center;
+  background-image: url("../images/main/promo/man.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #000000;
-  width: 100%;
-  max-width: 880px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 100px;
+  box-sizing: border-box;
+  width: 45%;
   height: 730px; }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    .promo {
+      width: 100%; } }
 
 .promo__text {
   font-family: Playfair Display;
@@ -275,8 +300,106 @@
   font-size: 36px;
   line-height: 48px;
   text-align: center;
-  color: #FFFFFF; }
+  color: #FFFFFF;
+  margin-bottom: 30px; }
 
 .promo__line {
   width: 120px;
+  color: #FFFFFF;
+  margin-bottom: 30px; }
+
+.promo__link {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  width: 150px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #FFFFFF;
+  text-decoration: none; }
+
+.new-collection__down-content {
+  display: flex; }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    .new-collection__down-content {
+      display: block; } }
+
+.picture {
+  width: 45%;
+  height: 600px;
+  background-image: url("../images/main/articles/picture/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #000000;
+  background-position: center center; }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    .picture {
+      width: 100%; } }
+
+.collection-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #000000;
+  width: 55%; }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    .collection-info {
+      width: 100%; } }
+
+.collection-info__article {
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 48px;
+  text-align: center;
+  color: #FFFFFF;
+  text-transform: uppercase; }
+
+.collection-info__line {
+  width: 120px;
+  margin: 40px auto; }
+
+.collection-info__text {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-transform: none;
+  width: 471px;
+  height: 173px;
+  margin: 0px auto;
+  text-align: center; }
+
+.collection-info__button {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  letter-spacing: 0.1em;
+  margin: 40px auto 0px;
+  padding: 10px 0px;
+  width: 310px;
+  background: #000000;
+  border: 1px solid #FFFFFF; }
+
+.collection-info__location {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  text-transform: uppercase;
   color: #FFFFFF; }
