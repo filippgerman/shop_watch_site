@@ -12,6 +12,10 @@
   max-width: 1180px;
   margin: 0 auto; }
 
+.line {
+  width: 120px;
+  color: #FFFFFF; }
+
 .header {
   background: #000000; }
 
@@ -185,7 +189,7 @@
   text-align: center; }
 
 .new-collection {
-  max-height: 730px;
+  max-height: 1330px;
   max-width: 1900px;
   display: flex; }
 
@@ -225,8 +229,6 @@
   margin-bottom: 50px; }
 
 .season-products__line {
-  width: 120px;
-  border: 1px solid #FFFFFF;
   margin-bottom: 50px; }
 
 .season-products__collection {
@@ -239,42 +241,8 @@
 .season-products__item + .season-products__item {
   margin-left: 50px; }
 
-.season-products__cart {
-  width: 100%;
-  max-width: 170px;
-  height: 325px;
-  background: #191B1C;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-
-.saeson-products__photo {
-  max-width: 215px;
-  max-height: 214px;
-  height: 100%;
-  width: 100%; }
-
-.product-name {
-  font-family: Playfair Display;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 24px;
-  text-align: center;
-  color: #FFFFFF;
-  text-align: left;
-  padding-top: 25px; }
-
-.product-price {
-  font-family: Playfair Display;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 21px;
-  text-align: center;
-  color: #D0D0D0;
-  text-align: left;
-  padding-top: 10px; }
+.season-products__img {
+  max-width: 170px; }
 
 .promo {
   background-image: url("../images/main/promo/man.png");
@@ -304,8 +272,6 @@
   margin-bottom: 30px; }
 
 .promo__line {
-  width: 120px;
-  color: #FFFFFF;
   margin-bottom: 30px; }
 
 .promo__link {
@@ -357,14 +323,13 @@
   font-family: Playfair Display;
   font-style: normal;
   font-weight: normal;
-  font-size: 36px;
-  line-height: 48px;
+  font-size: 18px;
+  line-height: 24px;
   text-align: center;
   color: #FFFFFF;
   text-transform: uppercase; }
 
 .collection-info__line {
-  width: 120px;
   margin: 40px auto; }
 
 .collection-info__text {
@@ -404,3 +369,102 @@
   line-height: 23px;
   text-transform: uppercase;
   color: #FFFFFF; }
+
+.product-page {
+  background: #000000;
+  height: 1290px;
+  padding-top: 120px;
+  box-sizing: border-box; }
+
+.product-page__line {
+  margin-bottom: 80px; }
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 405px;
+  row-gap: 40px; }
+
+.products__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.products__cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 325px;
+  background: #191B1C;
+  max-width: 260px; }
+
+.products__img {
+  max-width: 215px;
+  max-height: 214px;
+  height: 100%;
+  width: 100%; }
+
+.products__content {
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: start; }
+
+.products__title {
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  margin-top: 25px; }
+
+.products__price {
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  color: #FFFFFF;
+  margin-top: 10px; }
+
+.brands {
+  height: 362px;
+  background: #0F0F0F;
+  box-sizing: border-box; }
+
+.brands__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+.brands__title {
+  padding-top: 60px;
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 48px;
+  text-align: center;
+  color: #FFFFFF;
+  text-transform: uppercase; }
+
+.brands__line {
+  margin: 40px 0px; }
+
+.brands__companys {
+  display: flex;
+  flex-direction: center;
+  align-items: center; }
+
+.brands__img {
+  width: 255px;
+  height: 94px; }
+  .brands__img + .brands__img {
+    margin-left: 30px; }

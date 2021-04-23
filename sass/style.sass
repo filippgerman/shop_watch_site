@@ -58,6 +58,16 @@ $screen-lg-max: 1199px
   text-align: center
   color: $color
 
+=PlayfairNormal($font-size, $line-height, $color)
+  font-family: Playfair Display
+  font-style: normal
+  font-weight: normal
+  font-size: $font-size
+  line-height: $line-height
+  text-align: center
+  color: $color
+  text-transform: uppercase
+
 =Centering()
   display: flex 
   justify-content: space-between
@@ -68,6 +78,11 @@ $screen-lg-max: 1199px
 .container
   max-width: 1180px 
   margin: 0 auto
+
+//========== lline ==========
+.line
+  width: 120px
+  color: $white
 
 //========== Header ==========
 .header
@@ -221,7 +236,7 @@ $screen-lg-max: 1199px
 
 //========== articles ==========
 .new-collection
-  max-height: 730px
+  max-height: 1330px
   max-width: 1900px
   display: flex
 
@@ -256,8 +271,6 @@ $screen-lg-max: 1199px
   margin-bottom: 50px
 
 .season-products__line
-  width: 120px
-  border: 1px solid $white
   margin-bottom: 50px
 
 .season-products__collection
@@ -271,31 +284,8 @@ $screen-lg-max: 1199px
   + .season-products__item
     margin-left: 50px
 
-.season-products__cart 
-  width: 100%
+.season-products__img
   max-width: 170px
-  height: 325px
-  background: $bg-brown
-  display: flex
-  justify-content: center
-  align-items: center
-
-.saeson-products__photo 
-  max-width: 215px
-  max-height: 214px
-  height: 100%
-  width: 100%
-
-.product-name
-  +Playfair(18px, 24px, $white)
-  text-align: left
-  padding-top: 25px
-
-.product-price
-  +Playfair(16px, 21px, $lt-grey)
-  text-align: left
-  padding-top: 10px
-
 
 //===== promo  =====
 .promo
@@ -322,8 +312,6 @@ $screen-lg-max: 1199px
   margin-bottom: 30px
 
 .promo__line
-  width: 120px
-  color: $white
   margin-bottom: 30px
 
 .promo__link
@@ -368,17 +356,9 @@ $screen-lg-max: 1199px
     width: 100%
 
 .collection-info__article
-  font-family: Playfair Display
-  font-style: normal
-  font-weight: normal
-  font-size: 36px
-  line-height: 48px
-  text-align: center
-  color: $white
-  text-transform: uppercase
+  +PlayfairNormal(18px, 24px, $white)
 
 .collection-info__line
-  width: 120px
   margin: 40px auto
 
 .collection-info__text
@@ -400,3 +380,88 @@ $screen-lg-max: 1199px
 
 .collection-info__location
   +Sans(18px, 23px, $white)
+
+//========== articles ==========
+
+.product-page
+  background: $bg-dark
+  height: 1290px
+  padding-top: 120px
+  box-sizing: border-box
+  
+.product-page__line
+  margin-bottom: 80px
+
+.products
+  display: grid
+  grid-template-columns: repeat(4, 1fr)
+  grid-auto-rows: 405px
+  row-gap: 40px
+
+.products__item
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+.products__cart
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 100%
+  height: 325px
+  background: $bg-brown
+  max-width: 260px
+
+.products__img
+  max-width: 215px
+  max-height: 214px
+  height: 100%
+  width: 100%
+
+.products__content
+  width: 260px
+  display: flex
+  flex-direction: column
+  align-items: start
+
+.products__title
+  +PlayfairNormal(18px, 24px, $white)
+  margin-top: 25px
+ 
+.products__price
+  +Playfair(16px, 21px, $white)
+  margin-top: 10px
+
+//========== articles ==========
+
+.brands
+  height: 362px
+  background: $bg-grey
+  box-sizing: border-box
+  
+.brands__content
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+
+.brands__title
+  padding-top: 60px
+  +Playfair(36px, 48px, $white)
+  text-transform: uppercase
+
+.brands__line
+  margin: 40px 0px
+
+.brands__companys
+  display: flex
+  flex-direction: center
+  align-items: center
+
+.brands__img
+  width: 255px
+  height: 94px
+  + .brands__img
+    margin-left: 30px
+
